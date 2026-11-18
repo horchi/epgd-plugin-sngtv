@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+   <!--
+      Maps the (lower case) genres delivered by the API to the epgd categories.
+      The first category with a matching <contains> wins, so the order matters.
+      'Spielfilm' genres become 'Serie' if the event has season/episode numbers or lasts
+      less than 75 minutes; unmapped events with season/episode numbers become 'Serie' too
+      (see sngtv-utf-8.xsl).
+   -->
+   <categories>
+      <category name="Serie">
+         <contains>sitcom</contains>
+         <contains>soap</contains>
+         <contains>dokusoap</contains>
+         <contains>animation</contains>
+      </category>
+      <category name="Sport">
+         <contains>sport</contains>
+         <contains>fußball</contains>
+      </category>
+      <category name="Kinder">
+         <contains>kinder</contains>
+      </category>
+      <category name="Information">
+         <contains>nachrichten</contains>
+         <contains>dokumentation</contains>
+         <contains>wissen</contains>
+         <contains>magazin</contains>
+         <contains>politik</contains>
+         <contains>ratgeber</contains>
+         <contains>natur</contains>
+         <contains>geschichte</contains>
+         <contains>reisen</contains>
+         <contains>gesellschaft</contains>
+         <contains>biografie</contains>
+         <contains>lifestyle</contains>
+         <contains>kochen</contains>
+         <contains>auto</contains>
+         <contains>heimwerker</contains>
+      </category>
+      <category name="Kultur &amp; Musik">
+         <contains>musik</contains>
+         <contains>kultur</contains>
+      </category>
+      <category name="Show">
+         <contains>show</contains>
+         <contains>unterhaltung</contains>
+         <contains>reality</contains>
+         <contains>comedy</contains>
+         <contains>satire</contains>
+      </category>
+      <category name="Spielfilm">
+         <contains>drama</contains>
+         <contains>krimi</contains>
+         <contains>komödie</contains>
+         <contains>action</contains>
+         <contains>thriller</contains>
+         <contains>romantik</contains>
+         <contains>sciencefiction</contains>
+         <contains>fantasy</contains>
+         <contains>horror</contains>
+         <contains>abenteuer</contains>
+         <contains>film</contains>
+      </category>
+   </categories>
+</mapping>
